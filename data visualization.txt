@@ -1,0 +1,76 @@
+Data Visualization ::----
+
+case 1:- import pandas as pd
+ 
+#now loading data from url
+data=pd.read_csv('http://13.234.66.67/summer19/datasets/customer.csv')
+#now importing data visualization library
+import seaborn as sb
+#count and plot age column
+sb.countplot(data['Age'])
+#ploting all the column
+data.hist()
+
+##############################################################################
+
+case 2:- Matplotlib
+
+[1] #now loading data from url
+
+data=pd.read_csv('http://13.234.66.67/summer19/datasets/customer.csv')
+#lets go back to bachpan
+import matplotlib.pyplot as plt
+distance=[5,12,9]  #this is in km
+time=[2,5,7] #time taken in hour
+#data is for dede only
+
+distance1=[5,12,9] #this is in km
+time1=[1,8,5] #time taken in hour
+#data is for mahi only
+
+#designing x axis
+plt.xlabel("distance")
+plt.ylabel("time")
+plt.scatter(distance,time) #to show dots only
+plt.scatter(distance1,time1)
+plt.plot(distance,time) #to show line only
+plt.plot(distance1,time1)
+
+plt.grid(color='green')
+plt.legend() #to show label
+plt.show()  #showing graph
+
+#data for dhoni only
+runs=[5,12,9]  #this is in km
+balls=[2,5,7] #time taken in hour
+
+#data is for kholi only
+run=[5,12,9] #this is in km
+ball=[1,8,5] #time taken in hour
+
+#designing x axis
+plt.xlabel("runs")
+plt.ylabel("balls")
+plt.bar(runs,balls,label="ms dhoni")
+plt.bar(run,ball,label="virat kholi")
+
+plt.grid(color='green')
+plt.legend() #to show label
+plt.show()  #showing graph
+
+#################################################################################
+
+case 3:-- import pandas as pd 
+#now loading data from url
+#make a bar with installed file 
+#copy the url of file
+data=pd.read_csv('http://13.234.66.67/summer19/datasets/customer.csv')
+#now importing data visualization library
+import matplotlib.pyplot as plt
+
+#designing x and y axis
+plt.xlabel("gender")
+plt.ylabel("Age")
+plt.bar(data['Genre'],data['Age'])
+plt.grid(color='green')
+plt.show()  #showing graph
