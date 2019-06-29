@@ -1,4 +1,6 @@
 Data Visualization ::----
+first you have to log in with google colab then do the follwing work
+############################################################################
 
 case 1:- import pandas as pd
  
@@ -74,3 +76,7 @@ plt.ylabel("Age")
 plt.bar(data['Genre'],data['Age'])
 plt.grid(color='green')
 plt.show()  #showing graph
+
+
+
+
